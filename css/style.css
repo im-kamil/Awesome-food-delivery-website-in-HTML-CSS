@@ -1,0 +1,259 @@
+/* CSS reset  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS variables */
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar {
+    /* flex box is necessary for taking site in Row */
+    display: flex;
+    align-items: center;
+    /* position to relative so that it can easily sit on top */
+    position: relative;
+    top: 0px;
+    /* justify-content: center;   middle came but we have to keep in side */
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    /* top and left 0 is must */
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    /* by z-index contents above appear */
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/*  Navigation Bar:Image and Logo */
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    height: 150px;
+    margin: 3px 6px;
+}
+
+/* Navigation Bar: List Styling */
+
+/* use google fonts for creating styles in written para */
+#navbar ul {
+    display: flex;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#navbar ul li {
+    /* dot dot will not come from list style */
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    /* underline disappear by text decoration none */
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    /* height taking exact accurate in between */
+    height: 600px;
+    /* centre from both sides */
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    /* use before pseudoselectors for background */
+    /* copy pseudoselectors of navbar::before */
+    content: "";
+    /* use ../because we have to come outside at one folder , use no repeat center square /cover if image is not well look  */
+    background: url('../bg1.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 110%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    /* by z-index contents above appear */
+    z-index: -1;
+    opacity: 0.9;
+}
+
+/* Traget h1 and p from seperate */
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    /* font-size is taking which is equal to lorem written para */
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Serives Section */
+#services {
+    margin: 34px;
+    /* flex coz services inside 3 box do  */
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 5px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img {
+    height: 150px;
+    /* margin auto works after display block */
+    margin: auto;
+    display: block;
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+}
+
+/* Clients Section */
+#client-section {
+    text-align: center;
+    text-decoration: center;
+    position: relative;
+    /* height: 444px; */
+}
+
+/* use pseudoselectors for background image */
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('../bg.jpg');
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#clients {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* for setting in good way logo */
+.client-item {
+    padding: 34px;
+}
+
+#clients img {
+    height: 150px;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    text-decoration: center;
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+
+}
+
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes .. our services in h- primary */
+.h-primary {
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    justify-content: center;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.5rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.centre {
+    text-align: center;
+}
