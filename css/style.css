@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+/* for type and reached at tht point */
+html {
+    scroll-behavior: smooth;
+}
 
 /* CSS variables */
 :root {
@@ -256,4 +260,15 @@ footer {
 
 .centre {
     text-align: center;
+}
+#send {
+    padding: 20px;
+    width: 10%;
+    margin: 10px;
+    border: none;
+    outline: none;
+}
+#send:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
 }
